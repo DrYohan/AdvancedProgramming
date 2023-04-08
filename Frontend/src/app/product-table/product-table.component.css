@@ -1,0 +1,125 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color:  #F6F6F6;
+}
+
+/* Header Styles */
+header {
+  background-color: #F2D638 ;
+  color: black;
+  padding: 30px;
+  text-align:center;
+  font-style:'Poppins', sans-serif;
+  font-weight: bold;
+}
+
+nav {
+  background-color: #00BFFF;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-style: 'Poppins', sans-serif;
+  height: 100%;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+nav li {
+  margin: 10px 0;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+}
+
+nav a:hover {
+  background-color: #F2D638;
+  color: #000;
+}
+
+h1 {
+  margin: 0;
+}
+
+h2 {
+  margin-top:75px;
+  margin-bottom:50px;
+  text-align:center;
+  font-size:30px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 80%;
+  margin: 0 auto;
+}
+
+table th  {
+  text-align: center;
+  padding: 8px;
+  border:1px solid  #ccc;
+  background-color:  #E9B033;
+  color:white;
+}
+
+table td{
+  text-align: center;
+  padding: 8px;
+  border:1px solid  #ccc;
+}
+
+table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.edit-btn{
+  background-color:black;
+  border: none;
+  color:white;
+  font-weight:bold;
+  text-decoration:none;
+  padding:5px 10px;
+  border-radius:5px;
+}
+
+.delete-btn{
+  background-color:red;
+  border: none;
+  color:white;
+  font-weight:bold;
+  text-decoration:none;
+  padding:5px 10px;
+  border-radius:5px;
+}
+
+.add-product{
+  background-color:grey;
+  border: none;
+  color:white;
+  font-weight:bold;
+  text-decoration:none;
+  padding:5px 10px;
+  border-radius:5px;
+  margin-bottom:50px;
+  margin-right:10px;
+  float: right;
+}
+
+footer {
+  background-color: #000;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  margin-top:75px;
+}

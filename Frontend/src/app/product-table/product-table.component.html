@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Management - Bumble Bee</title>
+  <link rel="stylesheet" >
+</head>
+<body>
+ <header>
+      <h1>Bumble bee: Buy first and pay later</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="Admin-Dashboard.html">Dashboard</a></li>
+        <li><a href="Admin-Customer.html">Customers</a></li>
+        <li><a href="Admin-Product.html">Products</a></li>
+        <li><a href="#">Logout</a></li>
+      </ul>
+    </nav>
+
+  <h2>Product Management</h2>
+
+
+  <div class="products">
+
+      <a href="Add-Product.html" class="add-product" routerLink="/addProducts">Add Product</a>
+  </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Product ID</th>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Price</th>
+          <th>Category</th>
+          <th>Brand</th>
+          <th>Quantity</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let product of productDetails">
+        <tr>
+          <td>{{product.id}}</td>
+          <td>{{product.productName}}</td>
+          <td>{{product.productDescription}}</td>
+          <td>{{product.price}}</td>
+          <td>{{product.category}}</td>
+          <td>Brand 1</td>
+          <td>{{product.quantity}}</td>
+          <td>
+            <a class="edit-btn" (click)="editProdusts(product.id)">Edit</a>
+            <a class="delete-btn" (click)="deleteProduct(product.id)">Delete</a>
+          </td>
+        </tr>
+
+        <!-- add more products here -->
+      </tbody>
+    </table>
+
+  <footer>
+      <p>&copy; 2023 Admin Dashboard</p>
+    </footer>
+
+</body>
+</html>
+

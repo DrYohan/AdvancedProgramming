@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <title> Customer Registration</title>
+     <link rel="stylesheet" >
+     <script></script>
+   </head>
+  <body>
+  <header>
+    <h1>Bumble bee: Buy first and pay later</h1>
+
+
+    </header>
+
+    <h2>Customer Register</h2>
+
+    <form action="#" method="post" id=Regform>
+
+      <label for="customer_id">Customer ID:</label>
+      <input type="text" id="customer_id" name="customer_id" required>
+
+      <label for="full_name">Full Name:</label>
+      <input type="text" id="full_name" name="full_name" required>
+
+      <label for="date_of_birth">Date of Birth:</label>
+      <input type="date" id="date_of_birth" name="date_of_birth" required>
+
+      <label for="loan_balance">Loan Balance:</label>
+      <input type="text" id="loan_balance" name="loan_balance" required>
+
+      <label for="used_amount">Used Amount:</label>
+      <input type="text" id="used_amount" name="used_amount" required>
+
+      <label for="installment_plan">Installment Plan:</label>
+     <select class="installment-select" id="installment_plan" name="installment_plan" required>
+          <option value="">Select Installment Plan</option>
+          <option value="monthly">Monthly</option>
+          <option value="quarterly">Quarterly</option>
+          <option value="Yearly">Yearly</option>
+        </select>
+       <br><br>
+
+      <input class="reg-btn" type="submit" value="Register" (click)="submit()">
+    </form>
+
+
+
+   </body>
+
+
+
+</html>

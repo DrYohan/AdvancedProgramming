@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+
+/* Header Styles */
+header {
+  background-color: #3B82F6;
+  color: white;
+  padding: 30px;
+  text-align: center;
+  font-weight: bold;
+}
+nav {
+  background-color: #1E40AF;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 150px;
+  margin-bottom: 20px; /* Add margin to bottom of nav */
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+nav li {
+  margin: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+}
+
+nav a:hover {
+  background-color: #2563EB;
+  color: white;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #F6F6F6;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* header styles */
+
+.order-list h2 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 75px;
+  margin-bottom:50px;
+  text-align:center;
+
+}
+
+.header {
+  background-color: #3B82F6;
+  padding: 20px;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 36px;
+  text-align: center;
+}
+
+.header a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #333;
+  padding: 10px 20px;
+  background-color: #fff;
+  border: 2px solid #333;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.header a:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+/* table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+  margin-top: 20px; /* Add margin to top of table */
+  margin-bottom: 20px; /* Add margin to bottom of table */
+}
+
+thead {
+  background-color: #3B82F6;
+  color: #fff;
+  border: 1px solid #ccc;
+}
+
+th {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align:center;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* action link styles */
+td a {
+	text-decoration: none;
+	color: #333;
+	padding: 5px 10px;
+	background-color: #fff;
+	border: 2px solid #333;
+	border-radius: 5px;
+	transition: all 0.3s ease-in-out;
+}
+
+td a:hover {
+	background-color: #333;
+	color: #fff;
+}
+
+.edit-btn{
+
+	background-color:rgb(128, 255, 128);
+	border: none;
+	color:white;
+	font-weight:bold;
+
+}
+
+.delete-btn{
+
+	background-color:red;
+	border: none;
+	color:white;
+	font-weight:bold;
+
+
+}
+
+
