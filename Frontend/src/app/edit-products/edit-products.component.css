@@ -133,6 +133,14 @@ h2 {
     margin-right:10px;
     font-size:18px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-
-
+   
+      
       }
+
+      .edit-btn{
+        background-color: rgb(128, 255, 128);
+        border: none;
+        color: rgb(0, 0, 0);
+        font-weight: bold;
+        padding: 10px 20px; /* add this line */
+    }

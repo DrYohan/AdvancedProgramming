@@ -13,9 +13,9 @@
     </header>
     <nav>
       <ul>
-        <li><a href="Admin-Dashboard.html">Dashboard</a></li>
-        <li><a href="Admin-Customer.html">Customers</a></li>
-        <li><a href="Admin-Product.html">Products</a></li>
+        <li><a [routerLink]="['/dashboard']" routerLinkActive="router-link-active" >Dashboard</a></li>
+        <li><a routerLink="/customers">Customers</a></li>
+        <li><a routerLink="/product">Products</a></li>
         <li><a href="#">Logout</a></li>
       </ul>
     </nav>
@@ -43,7 +43,7 @@
 
           <div class="form-group">
             <label for="product-category">Product Category:</label>
-            <select id="product-category" name="product-category" required>
+            <select id="product-category" name="product-category" required formControlName="category">
               <option value="">Select Category</option>
               <option value="electronics">Electronics</option>
               <option value="home-appliances">Home Appliances</option>
@@ -62,14 +62,12 @@
           </div>
 
 
-          <button type="submit" class="save-changes" routerLink="/product" (click)="submit()">Save Changes </button>
+          <button type="submit" class="save-changes"  (click)="submit()">Save Changes </button>
         </form>
       </div>
 
 
-  <footer>
-      <p>&copy; 2023 Admin Dashboard</p>
-    </footer>
+
 </body>
 </html>
 

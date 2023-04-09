@@ -76,7 +76,7 @@ body {
   margin-top: 75px;
   margin-bottom:50px;
   text-align:center;
-
+  
 }
 
 .header {
@@ -111,11 +111,13 @@ body {
 
 /* table styles */
 table {
-  width: 100%;
+  width: 80%;
   border-collapse: collapse;
   border: 1px solid #ccc;
-  margin-top: 20px; /* Add margin to top of table */
-  margin-bottom: 20px; /* Add margin to bottom of table */
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: auto; /* Center the table horizontally */
+  margin-right: auto; /* Center the table horizontally */
 }
 
 thead {
@@ -156,22 +158,22 @@ td a:hover {
 }
 
 .edit-btn{
-
+	
 	background-color:rgb(128, 255, 128);
 	border: none;
 	color:white;
 	font-weight:bold;
-
+	
 }
 
 .delete-btn{
-
+	
 	background-color:red;
 	border: none;
 	color:white;
 	font-weight:bold;
-
-
+	
+	
 }
 
 

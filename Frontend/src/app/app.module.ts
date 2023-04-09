@@ -19,6 +19,7 @@ import { AddProductsComponent } from './add-products/add-products.component';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CustomerRegistrationComponent } from './customer-registration/customer-registration.component';
+import { DatePipe } from '@angular/common';
 
 const appRoutes: Routes = [
 
@@ -54,7 +55,8 @@ const appRoutes: Routes = [
     ProductTableComponent,
     EditProductsComponent,
     AddProductsComponent,
-    CustomerRegistrationComponent
+    CustomerRegistrationComponent,
+
   ],
   imports: [
     BrowserAnimationsModule,
@@ -80,7 +82,8 @@ const appRoutes: Routes = [
     {
         provide:HTTP_INTERCEPTORS,
         useClass:AuthInterceptor,
-        multi:true
+        multi:true,
+
     },
 UserService],
   bootstrap: [AppComponent],

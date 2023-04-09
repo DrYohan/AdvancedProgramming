@@ -11,7 +11,7 @@
     </header>
     <nav>
       <ul>
-        <li><a href="Admin-Dashboard.html">Dashboard</a></li>
+        <li><a [routerLink]="['/dashboard']" routerLinkActive="router-link-active" >Dashboard</a></li>
         <li><a routerLink="/customers">Customers</a></li>
         <li><a routerLink="/product">Products</a></li>
         <li><a href="#">Logout</a></li>
@@ -25,11 +25,11 @@
      <div class="cards">
         <div class="card">
           <h3>Customers</h3>
-          <p>50</p>
+          <p>{{totalCustomers}}</p>
         </div>
         <div class="card">
           <h3>Products</h3>
-          <p>200</p>
+          <p>{{totalProducts}}</p>
         </div>
 
         </div>

@@ -21,7 +21,7 @@ public class ProductController {
     public Product createFoods(@RequestBody Product product) {
         return productService.createProduct(product);
     }
-
+   
     @GetMapping(path = "/getProducts")
     public List<Product> getProducts(){
         return productService.getProducts();

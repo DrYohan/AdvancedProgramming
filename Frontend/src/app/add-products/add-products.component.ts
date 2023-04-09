@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IProduct, Product } from '../services/models/product-model';
 import { productsService } from '../services/product.service';
 import { FormBuilder } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
@@ -28,7 +28,7 @@ constructor(
 
   private form: FormBuilder,
   protected activatedRoute: ActivatedRoute,
-
+private router:Router,
   private matSnackBar: MatSnackBar,
   private productService: productsService
 ) {
@@ -75,6 +75,7 @@ private createFromForm(): IProduct {
     productDescription:this.editForm.get(['productDescription'])!.value,
     quantity:this.editForm.get(['quantity'])!.value,
     price:this.editForm.get(['price'])!.value,
+    category:this.editForm.get(['category'])!.value,
    };
 }
 
@@ -82,14 +83,23 @@ submit(){
 const submit=this.createFromForm();
 this.productService.create(submit).subscribe(res=>{
   res
+  this.router.navigateByUrl('/product')
+  setTimeout(() => {
+location.reload()
+}, 100);
+
   this.matSnackBar.open(
+
     "Product Added", 'OK', {
     verticalPosition: 'top',
     duration: 4000,
+
     panelClass: ['warning']
   })
   if(res.id){
-    location.reload();
+
+
+
   }
 
 })

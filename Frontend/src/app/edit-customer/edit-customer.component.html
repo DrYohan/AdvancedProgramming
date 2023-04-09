@@ -7,26 +7,26 @@
    </head>
   <body>
   <header>
-    <h1>Bumble bee: Buy first and pay later</h1>
+    <h1>Bumble bee</h1>
     </header>
 
     <h2>Edit Customer Details </h2>
 
-    <form action="#" method="post">
+    <form action="#" method="post" [formGroup]="editForm">
       <label for="customer_id">Customer ID:</label>
-      <input type="text" id="customer_id" name="customer_id" required>
+      <input type="text" id="customer_id" name="customer_id" required formControlName="id">
 
       <label for="full_name">Full Name:</label>
-      <input type="text" id="full_name" name="full_name" required>
+      <input type="text" id="full_name" name="full_name" required formControlName="name">
 
       <label for="date_of_birth">Date of Birth:</label>
-      <input type="date" id="date_of_birth" name="date_of_birth" required>
+      <input type="date" id="date_of_birth" name="date_of_birth" required formControlName="dateOfBirth">
 
       <label for="loan_balance">Loan Balance:</label>
-      <input type="text" id="loan_balance" name="loan_balance" required>
+      <input type="text" id="loan_balance" name="loan_balance" required formControlName="budget">
 
       <label for="used_amount">Used Amount:</label>
-      <input type="text" id="used_amount" name="used_amount" required>
+      <input type="text" id="used_amount" name="used_amount" required formControlName="usedAmount">
 
       <label for="installment_plan">Installment Plan:</label>
      <select class="installment-select" id="installment_plan" name="installment_plan" required>
@@ -38,11 +38,11 @@
 
        <br><br>
 
-      <input class="reg-btn" type="submit" value="Save Changes">
+      <input class="edit-btn" type="submit" value="Save Changes" (click)="updateCustomers()">
+
+      
     </form>
 
-    <footer>
-      <p>&copy; 2023 Admin Dashboard</p>
-    </footer>
+
   </body>
 </html>

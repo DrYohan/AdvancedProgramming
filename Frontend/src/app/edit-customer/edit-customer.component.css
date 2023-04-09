@@ -1,10 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+
 body {
 	margin: 0;
 	padding: 0;
 	font-family: Arial, sans-serif;
 	color: #333;
 	background-color: #F6F6F6;
-
+	
 }
 
 
@@ -18,7 +26,7 @@ header {
 }
 
 h2{
-
+	
 	margin-top:75px;
 	margin-bottom:50px;
 	text-align:center;
@@ -28,7 +36,7 @@ h2{
 
 
  /* Styles for the form */
-
+ 
       form {
         max-width: 600px;
         margin: 75px 400px;
@@ -49,27 +57,27 @@ h2{
         border: none;
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
       }
-
+   
       .error-message {
         color: red;
         font-size: 14px;
         margin-top: -10px;
         margin-bottom: 10px;
       }
-
+      
       .installment-select{
-
-
+      
+      
       padding:10px;
       border:none;
       box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
       border-radius: 5px;
-
+      
       }
-
-
+      
+      
      .save-changes{
-
+      
     background-color:grey;
 	border: none;
 	color:white;
@@ -82,9 +90,16 @@ h2{
     margin-right:10px;
     font-size:18px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-
-
-      }
-
-
+   
       
+      }
+      
+
+      .edit-btn{
+        background-color: rgb(128, 255, 128);
+        border: none;
+        color: rgb(3, 3, 3);
+        font-weight: bold;
+        padding: 10px 20px; /* add this line */
+    }
+    

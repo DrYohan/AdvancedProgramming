@@ -36,11 +36,13 @@ constructor(
 ngOnInit(): void {
   this.activatedRoute.params.subscribe(response => {
      this.productId= (response['id'])
+     alert(this.productId)
       this.productService.getProductsById(this.productId).subscribe(response => {
         this.editForm.get(['productName'])?.patchValue(response.productName)
         this.editForm.get(['productDescription'])?.patchValue(response.productDescription)
         this.editForm.get(['price'])?.patchValue(response.price)
         this.editForm.get(['quantity'])?.patchValue(response.quantity)
+        this.editForm.get(['id'])?.patchValue(response.id)
 
 
 
@@ -55,17 +57,20 @@ private createFromForm(): IProduct {
   return {
 
     ...new Product(),
-    id: this.editForm.get(['id'])!.value,
+
     productName:this.editForm.get(['productName'])!.value,
     productDescription:this.editForm.get(['productDescription'])!.value,
     quantity:this.editForm.get(['quantity'])!.value,
     price:this.editForm.get(['price'])!.value,
+    category:this.editForm.get(['category'])!.value,
+
    };
 }
 
 submit(){
 const submit=this.createFromForm();
-this.productService.updateProduct(submit,this.productId).subscribe(res=>{
+submit.id=this.productId
+this.productService.create(submit).subscribe(res=>{
 
 })
 }

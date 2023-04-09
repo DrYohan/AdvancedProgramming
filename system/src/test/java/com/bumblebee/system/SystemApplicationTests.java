@@ -15,15 +15,10 @@ import com.bumblebee.system.service.ProductService;
 class TestloginAdmin {
 
 @Autowired
-AuthController authController;
+
 
 	@Test
 	void Test() {
-//		LoginRequest loginRequest=new LoginRequest();
-//		loginRequest.setUsername("admin1");
-//		loginRequest.setPassword("123456789");
-//
-//		System.out.println(authController.authenticateUser(loginRequest).getBody());
 	}
 
 }

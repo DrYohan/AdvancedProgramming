@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { IRegister, Register } from '../services/models/register-model';
+import { ICustomer, Register } from '../services/models/register-model';
 import { registerService } from '../services/register.service';
 
 @Component({
@@ -10,7 +10,16 @@ import { registerService } from '../services/register.service';
   styleUrls: ['./customer-registration.component.css']
 })
 export class CustomerRegistrationComponent {
-  registerForm: any;
+  registerForm = this.form.group({
+    name           : [],
+    email          : [],
+    password       : [],
+
+    budget:[],
+    dateOfBirth:[]
+
+});
+
   constructor(
 
     private form: FormBuilder,
@@ -21,28 +30,20 @@ export class CustomerRegistrationComponent {
 
   ngOnInit(): void
   {
-      this.registerForm = this.form.group({
-          name           : ['', Validators.required],
-          email          : ['', [Validators.required, ]],
-          password       : ['', Validators.required],
-          passwordConfirm: ['', [Validators.required, ]],
-          budget:['',],
-          dateOfBirth:[]
 
-      });
 
 
   }
-  private register(): IRegister {
+  private register(): ICustomer {
     return {
 
       ...new Register(),
 
-     email: this.registerForm.get(['email']).value,
-     name:this.registerForm.get(['name']).value,
-     dateOfBirth:this.registerForm.get(['dateOfBirth']).value,
-    password:this.registerForm.get(['password']).value,
-     budget:this.registerForm.get(['budget']).value,
+     email: this.registerForm.get(['email'])!.value,
+     name:this.registerForm.get(['name'])!.value,
+     dateOfBirth:this.registerForm.get(['dateOfBirth'])!.value,
+    password:this.registerForm.get(['budget'])!.value,
+     budget:this.registerForm.get(['budget'])!.value,
 
      };
   }
@@ -50,14 +51,14 @@ export class CustomerRegistrationComponent {
   submit(){
     const submit=this.register();
     this.registerService.create(submit).subscribe(res=>{
-
+      this.matSnackBar.open(
+        "Registration Succesful", 'OK', {
+        verticalPosition: 'top',
+        duration: 4000,
+        panelClass: ['warning']
+      })
     })
-    this.matSnackBar.open(
-      "Registration Succesful", 'OK', {
-      verticalPosition: 'top',
-      duration: 4000,
-      panelClass: ['warning']
-    })
+   
   }
 
 }

@@ -37,7 +37,7 @@ ngOnInit(): void
 }
 deleteProduct(id:any){
   this.productService.delete(id).subscribe(res=>{
-
+    location.reload();
     this.matSnackBar.open(
       "Deleted Successfully", 'OK', {
       verticalPosition: 'top',

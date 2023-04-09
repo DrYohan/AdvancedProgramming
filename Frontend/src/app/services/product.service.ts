@@ -31,9 +31,7 @@ public getProductsById(id:any):Observable<any>{
 public create(tenant: IProduct): Observable<any> {
     return this.httpclient.post<IProduct>('http://localhost:8080/api/product/addProducts', tenant, { observe: 'response' });
   }
-  // public update(tenant: IProduct): Observable<any> {
-  //   return this.httpclient.put<IProduct>('http://localhost:8080/api/product/updateProducts', tenant, tenant.id,{ observe: 'response' });
-  // }
+
  public delete(id: string): Observable<HttpResponse<any>> {
     return this.httpclient.delete<any>(`http://localhost:8080/api/product/deleteProducts/${id}`, { observe: 'response' });
   }

@@ -74,9 +74,9 @@ h2 {
 }
 
 p{
-
+	
 	text-align:center;
-
+	
 }
 
 main {
@@ -99,13 +99,13 @@ main {
   width: 300px;
   float:left;
   align-self:center;
-
+  
 }
 
 .card h3 {
   margin-top: 0;
   text-align:center;
-
+ 
 }
 
 .card p {
@@ -115,7 +115,7 @@ main {
 }
 
 .clear-fix{
-
+	
 	clear:both;
 	float:none;
 }

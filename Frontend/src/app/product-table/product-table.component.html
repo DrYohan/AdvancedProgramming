@@ -7,13 +7,13 @@
 </head>
 <body>
  <header>
-      <h1>Bumble bee: Buy first and pay later</h1>
+      <h1>Bumble bee</h1>
     </header>
     <nav>
       <ul>
-        <li><a href="Admin-Dashboard.html">Dashboard</a></li>
-        <li><a href="Admin-Customer.html">Customers</a></li>
-        <li><a href="Admin-Product.html">Products</a></li>
+        <li><a [routerLink]="['/dashboard']" routerLinkActive="router-link-active" >Dashboard</a></li>
+        <li><a routerLink="/customers">Customers</a></li>
+        <li><a routerLink="/product">Products</a></li>
         <li><a href="#">Logout</a></li>
       </ul>
     </nav>
@@ -57,9 +57,6 @@
       </tbody>
     </table>
 
-  <footer>
-      <p>&copy; 2023 Admin Dashboard</p>
-    </footer>
 
 </body>
 </html>

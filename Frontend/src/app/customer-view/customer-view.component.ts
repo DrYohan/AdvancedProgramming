@@ -26,12 +26,7 @@ export class CustomerViewComponent {
 }
 ngOnInit(): void {
   this.getData();
-  this.matSnackBar.open(
-    "Customer Deleted", 'OK', {
-    verticalPosition: 'top',
-    duration: 4000,
-    panelClass: ['warning']
-  })
+
   //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
   //Add 'implements OnInit' to the class.
 
@@ -43,7 +38,7 @@ this.customerDetails=res
  //    modifiedDate:moment(block.modifiedDate).format('DD-MM-YYYY HH:mm'),
       this.listProducts=res
       this.listProducts
-  
+
       console.log(this.listProducts)
 
   })
@@ -52,6 +47,17 @@ edit(id:any){
   console.log(id)
   this.router.navigate(['/customersEdit/' + id ]);
 
+}
+delete(id:any){
+  this.registerService.delete(id).subscribe(res=>{
+    location.reload();
+    this.matSnackBar.open(
+      "Customer Deleted", 'OK', {
+      verticalPosition: 'top',
+      duration: 4000,
+      panelClass: ['warning']
+    })
+  })
 }
 
 }

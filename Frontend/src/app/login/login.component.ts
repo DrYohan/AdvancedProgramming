@@ -29,7 +29,7 @@ ngOnInit(): void
 {
 
     this.loginForm = this._formBuilder.group({
-        email   : ['hi', [Validators.required]],
+        email   : ['', [Validators.required]],
         password: ['', Validators.required]
     });
 
